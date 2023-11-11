@@ -1,4 +1,11 @@
 # current_inventory
+# Tugas 8
+<p><b>Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!</b><br></p>
+<p><b>Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!</b><br></p>
+<p><b>Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!</b><br></p>
+<p><b>Bagaimana penerapan clean architecture pada aplikasi Flutter?</b><br></p>
+<p><b>Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)</b><br></p>
+
 # Tugas 7
 <p><b>Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?</b><br>
 State sendiri merupakan data yang dibaca secara synchronous saat widget di build dan dapat berubah pada saat widget sedang tetap jalan. Jadi, stateless widget adalah widget yang tidak memiliki state, atau tidak bisa berubah selama aplikasi sedang berjalan, sedangkan stateful widget adalah widget yang dapat berubah selama aplikasi sedang berjalan.</p>
