@@ -12,9 +12,26 @@ Proses navigasi halaman di flutter dengan widget Navigator bekerja seperti suatu
 - TextFormField: Suatu TextField yang diwrap di dalam FormField yang digunakan untuk menginput dan save data.<br>
 - Form: Form digunakan sebagai container untuk mengroup 3 TextFormField yang digunakan pada aplikasi, jadi seluruh form field dimunculkan dan di save secara bersama (karena merupakan child dari Form).</p>
 <p><b>Bagaimana penerapan clean architecture pada aplikasi Flutter?</b><br>
-Clean Architecture pada flutter diimplementasikan</p>
-<p><b>Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)</b><br></p>
+Penerapan clean architecture di aplikasi flutter membagi aplikasi menjadi beberapa bagian yang memiliki satu tugas (bisa general/spesifik) dan melakukan tugas itu dengan baik. Ini adalah prinsip <i>Seperation of Concerns</i> yang diimplementasi di flutter dengan membagi aplikasi menjadi beberapa layer berdasarkan fungsinya. Layer yang didalam tidak memiliki dependency terhadap layer yang, jadi setiap layer didirikan di atas layer yang sebelumnya. Layernya tidak selalu sama untuk setiap aplikasi, tapi suatu contoh adalah:<br>
+- Domain Layer<br>
+Layer paling dalam yang memiliki kode untuk aplikasi bisnis, seperti use-case, entities, dan repositori.<br>
+- Presentation Layer<br>
+Berisi kode yang digunakan untuk mengakses data aplikasi dari repositori.<br>
+- Data and Platform Layer<br>
+Layer yang berisi data <i>source code</i>, akses ke database lokal, dan kode untuk UI. </p>
+<p><b>Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step!</b><br>
+<b>Pembuatan halaman formulir tambah item baru:</b><br>
+  Saya membuat berkas itemlist_form.dart yang berisi widget form dan text form field yang bisa digunakan untuk menginput dan save.<br>
+<b>Mengarahkan user ke halaman formulir tambah item ketika mengeklik "Tambah Item" pada halaman utama:</b><br>
+  Pada menu.dart, dibuat if dimana jika nama dari InventoryItem adalah "Tambah Item", akan jalan Navigator.push() route halaman formulir item, sehingga user akan diarahkan ke halaman formulir item jika memencet card Tambah Item.<br>
+<b>Memunculkan data sesuai isi dari formulir yang diisi dalam sebuah pop-up setelah menekan tombol Save pada halaman formulir tambah item baru:</b><br>
+  Membuat fungsi onPressed() yang mengambil context dari input form, dan memunculkannya dengan menggunakan showDialog() untuk membuat AlertDialog (pop-up) yang berisi contextnya.
+<b>Membuat drawer:</b>
+  Membuat berkas left_drawer.dart dan memasukkan widget drawer didalamnya yang berisi satu column dengan dua list tile, satu "Home Page" yang menuju ke halaman utama dan satu "Add Item" yang menuju ke halaman formulir tambah item.<br>
+</p>
 
+<p>Sumber:<br>
+https://betterprogramming.pub/flutter-clean-architecture-test-driven-development-practical-guide-445f388e8604</p>
 # Tugas 7
 <p><b>Apa perbedaan utama antara stateless dan stateful widget dalam konteks pengembangan aplikasi Flutter?</b><br>
 State sendiri merupakan data yang dibaca secara synchronous saat widget di build dan dapat berubah pada saat widget sedang tetap jalan. Jadi, stateless widget adalah widget yang tidak memiliki state, atau tidak bisa berubah selama aplikasi sedang berjalan, sedangkan stateful widget adalah widget yang dapat berubah selama aplikasi sedang berjalan.</p>
