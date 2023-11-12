@@ -25,7 +25,7 @@ Layer yang berisi data <i>source code</i>, akses ke database lokal, dan kode unt
 <b>Mengarahkan user ke halaman formulir tambah item ketika mengeklik "Tambah Item" pada halaman utama:</b><br>
   Pada menu.dart, dibuat if dimana jika nama dari InventoryItem adalah "Tambah Item", akan jalan Navigator.push() route halaman formulir item, sehingga user akan diarahkan ke halaman formulir item jika memencet card Tambah Item.<br>
 <b>Memunculkan data sesuai isi dari formulir yang diisi dalam sebuah pop-up setelah menekan tombol Save pada halaman formulir tambah item baru:</b><br>
-  Membuat fungsi onPressed() yang mengambil context dari input form, dan memunculkannya dengan menggunakan showDialog() untuk membuat AlertDialog (pop-up) yang berisi contextnya.
+  Membuat fungsi onPressed() yang mengambil context dari input form, dan memunculkannya dengan menggunakan showDialog() untuk membuat AlertDialog (pop-up) yang berisi contextnya.<br>
 <b>Membuat drawer:</b>
   Membuat berkas left_drawer.dart dan memasukkan widget drawer didalamnya yang berisi satu column dengan dua list tile, satu "Home Page" yang menuju ke halaman utama dan satu "Add Item" yang menuju ke halaman formulir tambah item.<br>
 </p>
