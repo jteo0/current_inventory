@@ -1,9 +1,18 @@
 # current_inventory
 # Tugas 8
-<p><b>Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!</b><br></p>
-<p><b>Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!</b><br></p>
-<p><b>Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!</b><br></p>
-<p><b>Bagaimana penerapan clean architecture pada aplikasi Flutter?</b><br></p>
+<p><b>Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!</b><br>
+Proses navigasi halaman di flutter dengan widget Navigator bekerja seperti suatu stack. Page/route yang berada di paling atas 'stack' merupakan yang ditunjukkan. Navigator.push() dan Navigator.pushReplacement() keduanya memasukkan suatu route ke atas stack, dengan perbedaan Navigator.push() menambahkan route ke atas stack, sedangkan Navigator.pushReplacement() mengubah route yang paling atas menjadi route yang mau ditaruh diatas.<br>
+- Contoh Navigator.push(): Saat ingin mengimplementasikan page yang memiliki fungsi back, seperti list item yang memiliki tombol untuk kembali ke halaman sebelumnya (diasumsi halaman list item bisa diakses dari beberapa halaman berbeda). Ini menggunakan Navigator.push() dan bukan pushReplacement karena untuk kembali ke halaman sebelumnya, route yang ada sebelum route list item di push harus tetap ada agar jika dilakukan pop bisa kembali ke halaman itu.<br>
+- Contoh Navigator.pushReplacement(): Jika ingin mengimplementasikan suatu fungsi dimana user tidak perlu/tidak diperbolehkan kembali ke halaman sebelumnya. Sebagai contoh, untuk masuk suatu halaman login digunakkan Navigator.pushReplacement() karena setelah suatu user telah login dengan benar, mereka seharusnya tidak kembali ke halaman login, kecuali sudah logout lagi.</p>
+<p><b>Jelaskan masing-masing layout widget pada Flutter dan konteks penggunaannya masing-masing!</b><br>
+- Single-child layout widgets: Layout widget yang hanya bisa memiliki satu child, seperti Align(), AspectRatio(), Container(), dan Padding(). Biasanya digunakan sebagai wrapper untuk widget lain, untuk mengubah posisi, mengubah margin, dll.<br>
+- Multi-child layout widgets: Layout widget yang bisa memiliki lebih dari satu child, atau children, seperti Column(), Row(), Stack(), dan Table(). Biasanya digunakan untuk menaruh banyak widget di dalam suatu layout, yaitu sebagai suatu list horizontal/vertikal, didalam suatu grid, dll.<br>
+- Sliver layout widgets: Layout widget yang merupakan bagian dari <i>scrollable area</i> yang digunakan untuk membuat layout scrolling yang unik. Widget sliver layout sering digunakan dalam pembuatan suatu ScrollView karena hanya merender konten yang sedang dilihat oleh user, sehingga memiliki performance yang baik.</p>
+<p><b>Sebutkan apa saja elemen input pada form yang kamu pakai pada tugas kali ini dan jelaskan mengapa kamu menggunakan elemen input tersebut!</b><br>
+- TextFormField: Suatu TextField yang diwrap di dalam FormField yang digunakan untuk menginput dan save data.<br>
+- Form: Form digunakan sebagai container untuk mengroup 3 TextFormField yang digunakan pada aplikasi, jadi seluruh form field dimunculkan dan di save secara bersama (karena merupakan child dari Form).</p>
+<p><b>Bagaimana penerapan clean architecture pada aplikasi Flutter?</b><br>
+Clean Architecture pada flutter diimplementasikan</p>
 <p><b>Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial)</b><br></p>
 
 # Tugas 7
