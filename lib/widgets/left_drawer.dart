@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:current_inventory/screens/menu.dart';
 import 'package:current_inventory/screens/itemlist_form.dart';
+import 'package:current_inventory/screens/show_items.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
-  static const IconData addShoppingCart = IconData(0xe05a, fontFamily: 'MaterialIcons');
+  static const IconData format_list_bulleted = IconData(0xe2b8, fontFamily: 'MaterialIcons', matchTextDirection: true);
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +53,7 @@ class LeftDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(addShoppingCart),
+            leading: const Icon(Icons.add_items),
             title: const Text('Add Item'),
             // Bagian redirection ke ItemFormPage
             onTap: () {
@@ -64,14 +65,14 @@ class LeftDrawer extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(addShoppingCart),
+            leading: const Icon(format_list_bulleted),
             title: const Text('Item List'),
             // Bagian redirection ke ItemFormPage
             onTap: () {
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ItemFormPage(),
+                    builder: (context) => ItemListPage(),
                   ));
             },
           ),

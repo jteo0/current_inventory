@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:current_inventory/widgets/left_drawer.dart';
+import 'package:current_inventory/saved_items.dart';
+import 'package:provider/provider.dart';
 
 class ItemFormPage extends StatefulWidget {
   const ItemFormPage({super.key});
@@ -136,6 +138,8 @@ class _ItemFormPageState extends State<ItemFormPage> {
                                       child: const Text('OK'),
                                       onPressed: () {
                                         Navigator.pop(context);
+                                        SavedItems savedItems = Provider.of<SavedItems>(context, listen: false);
+                                        savedItems.addItem(_name, _amount, _description);
                                       },
                                     ),
                                   ],

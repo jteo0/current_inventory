@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:current_inventory/screens/menu.dart';
+import 'package:provider/provider.dart';
+import 'package:current_inventory/saved_items.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(
+      ChangeNotifierProvider(
+        create: (context) => SavedItems(),
+        child: const MyApp(),
+      ),
+  );
 }
 
 class MyApp extends StatelessWidget {

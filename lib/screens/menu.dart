@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:current_inventory/screens/itemlist_form.dart';
 import 'package:current_inventory/widgets/item_card.dart';
 import 'package:current_inventory/widgets/left_drawer.dart';
+import 'package:current_inventory/screens/show_items.dart';
 
 class MyHomePage extends StatelessWidget {
   MyHomePage({Key? key}) : super(key: key);
@@ -81,7 +82,10 @@ class InventoryCard extends StatelessWidget {
             ..hideCurrentSnackBar()
             ..showSnackBar(SnackBar(
                 content: Text("Kamu telah menekan tombol ${item.name}!")));
-
+          if (item.name == "Lihat Item") {
+            Navigator.push(context,
+            MaterialPageRoute(builder: (context) => const ItemListPage()));
+          }
           if (item.name == "Tambah Item") {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => const ItemFormPage()));

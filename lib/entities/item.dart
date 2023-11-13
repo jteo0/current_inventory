@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 
-class ItemObject {
+@immutable
+class Item {
   final String name;
   final int amount;
   final String description;
 
-  ItemObject(this.name, this.amount, this.description);
+  Item(this.name, this.amount, this.description);
 }
