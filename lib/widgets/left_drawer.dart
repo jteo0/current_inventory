@@ -64,6 +64,7 @@ class LeftDrawer extends StatelessWidget {
                   ));
             },
           ),
+<<<<<<< HEAD
           ListTile(
             leading: const Icon(format_list_bulleted),
             title: const Text('Item List'),
@@ -76,6 +77,8 @@ class LeftDrawer extends StatelessWidget {
                   ));
             },
           ),
+=======
+>>>>>>> 82e42de6ae2117fc0da99565c1dc4221d49504b1
         ],
       ),
     );
