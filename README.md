@@ -1,4 +1,15 @@
 # current_inventory
+# Tugas 9
+<p><b>Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?</b><br>
+Bisa, namun sebaiknya menggunakan model. Ini karena jika tidak ada model, data akan diproses dalam bentuk string dan dengan cara pemrosesan string, yang <i>overall</i> lebih inefisien daripada menggunakan model.</p>
+<p><b>Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.</b><br>
+CookieRequest digunakan untuk menerima cookie dari server. Semua proses yang melibatkan minta cookie dari server memerlukan CookieRequest, diantaranya untuk membuat session bagi user yang sedang login, penyimpanan state, dll.</p>
+<p><b>Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.</b><br>
+Aplikasi flutter akan</p>
+<p><b>Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.</b><br></p>
+<p><b>Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.</b><br></p>
+<p><b>Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).</b><br></p>
+
 # Tugas 8
 <p><b>Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!</b><br>
 Proses navigasi halaman di flutter dengan widget Navigator bekerja seperti suatu stack. Page/route yang berada di paling atas 'stack' merupakan yang ditunjukkan. Navigator.push() dan Navigator.pushReplacement() keduanya memasukkan suatu route ke atas stack, dengan perbedaan Navigator.push() menambahkan route ke atas stack, sedangkan Navigator.pushReplacement() mengubah route yang paling atas menjadi route yang mau ditaruh diatas.<br>
