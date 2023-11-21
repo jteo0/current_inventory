@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:current_inventory/screens/menu.dart';
 import 'package:current_inventory/screens/itemlist_form.dart';
-import 'package:current_inventory/screens/show_items.dart';
+import 'package:current_inventory/screens/list_item.dart';
 
 class LeftDrawer extends StatelessWidget {
   const LeftDrawer({super.key});
@@ -64,7 +64,6 @@ class LeftDrawer extends StatelessWidget {
                   ));
             },
           ),
-<<<<<<< HEAD
           ListTile(
             leading: const Icon(format_list_bulleted),
             title: const Text('Item List'),
@@ -73,12 +72,10 @@ class LeftDrawer extends StatelessWidget {
               Navigator.pushReplacement(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => ItemListPage(),
+                    builder: (context) => ItemPage(),
                   ));
             },
           ),
-=======
->>>>>>> 82e42de6ae2117fc0da99565c1dc4221d49504b1
         ],
       ),
     );
