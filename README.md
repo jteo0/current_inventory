@@ -1,14 +1,30 @@
 # current_inventory
 # Tugas 9
 <p><b>Apakah bisa kita melakukan pengambilan data JSON tanpa membuat model terlebih dahulu? Jika iya, apakah hal tersebut lebih baik daripada membuat model sebelum melakukan pengambilan data JSON?</b><br>
-Bisa, namun sebaiknya menggunakan model. Ini karena jika tidak ada model, data akan diproses dalam bentuk string dan dengan cara pemrosesan string, yang <i>overall</i> lebih inefisien daripada menggunakan model.</p>
+Bisa, namun sebaiknya menggunakan model. Ini karena jika tidak ada model, data akan diproses dalam bentuk string dan dengan cara pemrosesan string, yang <i>overall</i> lebih inefisien daripada menggunakan model. Lebih baik untuk menggunakan model agar pemrosesan data lebih terstruktur.</p>
 <p><b>Jelaskan fungsi dari CookieRequest dan jelaskan mengapa instance CookieRequest perlu untuk dibagikan ke semua komponen di aplikasi Flutter.</b><br>
 CookieRequest digunakan untuk menerima cookie dari server. Semua proses yang melibatkan minta cookie dari server memerlukan CookieRequest, diantaranya untuk membuat session bagi user yang sedang login, penyimpanan state, dll.</p>
 <p><b>Jelaskan mekanisme pengambilan data dari JSON hingga dapat ditampilkan pada Flutter.</b><br>
-Aplikasi flutter akan</p>
-<p><b>Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.</b><br></p>
-<p><b>Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.</b><br></p>
-<p><b>Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).</b><br></p>
+Aplikasi flutter akan memanggil halaman web yang berisi data dalam bentuk string JSON. String ini dikonversi ke object JSON dengan <code>jsonDecode</code>, dan kemudian dikonversi jadi instance dari model yang sudah dibuat menggunakan <code>NameModel.fromJson(jsonObject). Setelah itu, data bisa ditampilkan menurut keinginan developer.</code></p>
+<p><b>Jelaskan mekanisme autentikasi dari input data akun pada Flutter ke Django hingga selesainya proses autentikasi oleh Django dan tampilnya menu pada Flutter.</b><br>
+Setelah masuk input login untuk autentikasi di Flutter, Flutter akan send login request ke backend Django yang kemudian verifikasi username dan passwordnya. Valid atau tidaknya dimasukkan ke token yang dikembalikan ke Flutter. Setelah Flutter meng-accept tokennya, halaman flutter akan muncul berdasarkan terverifikasi benar atau tidak.</p>
+<p><b>Sebutkan seluruh widget yang kamu pakai pada tugas ini dan jelaskan fungsinya masing-masing.</b><br>
+-Provider: Untuk menginisialisasi sebuah value yang dapat diakses oleh childnya.<br>
+Navigator: Digunakan untuk navigasi di aplikasi.<br>
+-MaterialPageRoute: Untuk menyediakan transisi saat pindah halaman.<br>
+-ScaffoldMessenger: Digunakan untuk memunculkan snack bar.<br>
+-Text: Untuk memunculkan teks.<br>
+-TextEditingController: Untuk membaca setiap perubahan dalam input.<br>
+-MainAxisAlignment: Untuk mengatur alignment children berdasarkan axis utama.<br>
+-AlertDialog: Untuk membuat AlertDialog.<br>
+-Future: Sebagai placeholder untuk komputasi asinkron yang belum selesai.<br>
+-CircularProgressIndicator: Membuat circular progress indicator yang menunjukkan progress load.<br>
+-ListView: Untuk membuat list widget yang dapat discroll.<br>
+-FutureBuilder: Untuk membuat widget yang isinya tergantung dari isi widget Future.<br>
+-AsyncSnapshot: Representasi hasi interaksi terakhir dengan sebuah komputasi asinkron, yang digunakan untuk FutureBuilder.<br>
+-TextButton: Untuk membuat text button.<br></p>
+<p><b>Jelaskan bagaimana cara kamu mengimplementasikan checklist di atas secara step-by-step! (bukan hanya sekadar mengikuti tutorial).</b><br>
+Pertama, saya membuat aplikasi authentication di Django saya yang menerima cookie session. Setelah itu, di aplikasi Flutter saya membuat halaman login yang terhubung ke authentication Django. Fungsi CookieRequest akan menyimpan informasi tentang item yang ada di Django yang kemudian di parse dalam bentuk JSON dan dikirim ke Flutter. Data tersebut akan ditampilkan di halaman Lihat Item yang sudah dibuat.</p>
 
 # Tugas 8
 <p><b>Jelaskan perbedaan antara Navigator.push() dan Navigator.pushReplacement(), disertai dengan contoh mengenai penggunaan kedua metode tersebut yang tepat!</b><br>
