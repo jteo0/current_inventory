@@ -14,7 +14,7 @@ class ItemPage extends StatefulWidget {
 class _ItemPageState extends State<ItemPage> {
   Future<List<Item>> fetchItem() async {
     var url = Uri.parse(
-        'http://localhost:8000/json/');
+        'https://jeslyn-theodora-tugas.pbp.cs.ui.ac.id/json/');
     var response = await http.get(
       url,
       headers: {"Content-Type": "application/json"},
